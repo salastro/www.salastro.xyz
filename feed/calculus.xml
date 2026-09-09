@@ -4,7 +4,7 @@
     <title>SalahDin Rezk Blog</title>
     <link>https://salastro.github.io</link>
     <description>Essays and technical writing from SalahDin Rezk.</description>
-    <lastBuildDate>Tue, 08 Sep 2026 18:37:05 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 09 Sep 2026 16:23:04 GMT</lastBuildDate>
     <atom:link href="https://salastro.github.io/feed/calculus.xml" rel="self" type="application/rss+xml"/>
 
     <item>
@@ -20,7 +20,7 @@
       <category>calculus</category>
       <category>symbolic-computation</category>
       <description>Understanding
- Top-level Integration Module</description>
+ Top-level integration module</description>
     </item>
   </channel>
 </rss>
