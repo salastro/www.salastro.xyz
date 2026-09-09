@@ -13,7 +13,7 @@ links:
 
 Public-key cryptography based on the algebraic structure of elliptic curves over finite fields. ECC provides equivalent security to RSA with significantly smaller key sizes.
 
-## Mathematical Foundation
+## Mathematical foundation
 
 An elliptic curve over a finite field $\mathbb{F}_p$ is defined by:
 
@@ -29,7 +29,7 @@ The security of ECC relies on the Elliptic Curve Discrete Logarithm Problem (ECD
 
 Given $Q = dP$ for unknown $d$, efficiently computing $d$ from $Q$ and $P$ is computationally hard for properly chosen curves.
 
-## Common Curves
+## Common curves
 
 - **NIST P-256, P-384, P-521**: FIPS standard curves with special structure
 - **Curve25519 and Curve448**: Designed for efficiency and security against side-channel attacks

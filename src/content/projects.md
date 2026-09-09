@@ -15,42 +15,14 @@ links:
   - "proj-dsp-fpga"
 ---
 
-Active engineering and research projects spanning cryptographic protocols, space systems, and digital signal processing. Each project applies theoretical foundations to real-world constraints.
+Three projects, three different constraints to design around: cryptography that has to survive quantum computers, a satellite that has to survive low power and orbital mechanics, an audio filter that has to survive FPGA resource limits. What ties them together isn't the domain, it's the same loop: work it out on paper, simulate it, build it, then find out where the theory was wrong.
 
-## Project Selection Criteria
+## Active
 
-Projects are selected based on:
-- **Research value**: Novel contributions to existing bodies of knowledge
-- **Implementation challenges**: Non-trivial technical obstacles to overcome
-- **Cross-disciplinary integration**: Bridging multiple domains
-- **Reproducibility**: Clear documentation and modular design
+- Quantum Key Distribution: post-quantum hybrid QKD protocols, and the deployment problems that don't surface until you try to run one for real.
+- CubeSat Communications: a small satellite platform for testing orbital mechanics and low-power comms.
+- FPGA Audio Filter: real-time DSP built for resource efficiency and low latency, not just correctness.
 
-## Active Portfolio
+## How projects get picked
 
-The current portfolio spans three major domains:
-
-### Quantum Key Distribution Protocol Implementation
-Practical instantiation of QKD protocols with focus on post-quantum hybrid approaches and practical deployment challenges.
-
-### CubeSat Communications System
-Small satellite platform for testing orbital mechanics optimization and low-power communication protocols.
-
-### FPGA-Based Audio Filter
-Hardware implementation of real-time digital signal processing with emphasis on resource efficiency and low latency.
-
-## Methodology
-
-Each project follows an iterative development cycle:
-1. Theoretical analysis and feasibility study
-2. Simulation and prototyping
-3. Hardware implementation (where applicable)
-4. Testing against specifications
-5. Documentation and knowledge transfer
-
-## Impact and Outcomes
-
-Projects generate:
-- Publications and technical reports
-- Open-source software and hardware designs
-- Insights for future research directions
-- Training in practical engineering
+Mostly by whether it would teach me something a course wouldn't: a real technical obstacle, work that crosses domains instead of sitting in one, and something documented well enough that someone else could pick it up where I left off.

@@ -28,7 +28,7 @@ Quantum information extends classical information theory by encoding data in qua
 
 ## Error Correction
 
-Quantum error correction codes protect quantum information against decoherence and noise. Stabilizer codes and topological codes represent the leading approaches for fault-tolerant quantum computation.
+Quantum error correction codes protect quantum information against decoherence and noise. Stabilizer codes and topological codes are the leading approaches to fault-tolerant quantum computation.
 
 ## Hamiltonian Simulation
 

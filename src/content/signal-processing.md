@@ -21,15 +21,13 @@ links:
 
 The analysis, synthesis, and modification of signals. My focus is on stochastic signal processing in high-noise environments and optimal estimation theory.
 
-## Mathematical Model
+## Mathematical model
 
-The core dynamics of the system are governed by the convolution theorem and spectral analysis.
-We assume a closed system with boundary conditions defined by the operational parameters.
+Convolution and spectral analysis describe how a linear system transforms an input signal in time and frequency. Estimation theory takes over from there, asking how to recover the true underlying signal when what you actually have is a noisy measurement of it.
 
 ## Implementation
 
-The proposed architecture utilizes a distributed consensus mechanism to ensure data integrity.
-Below is a pseudocode representation of the core loop.
+A Kalman filter is the clearest example: at each sample, estimate the noise, subtract it, and update a running state estimate that folds in everything seen so far.
 
 ```python
 def process_signal(input_vector):
@@ -41,7 +39,6 @@ def process_signal(input_vector):
     return state.optimal_estimate
 ```
 
-## Results & Extensions
+## Where this goes
 
-Preliminary simulations indicate a 15% improvement in signal-to-noise ratio compared to classical methods.
-Future work will extend this framework to higher-dimensional manifolds and explore the implications for quantum-classical hybrid systems.
+The interesting part isn't the filter itself but tuning it: getting the noise and process covariances right for a specific sensor is closer to fitting a statistical model than writing code.

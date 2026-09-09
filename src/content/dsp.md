@@ -11,7 +11,7 @@ links:
   - "programming"
 ---
 
-Discrete-time signal representation and manipulation. DSP forms the computational foundation for analyzing signals sampled from continuous-time systems, with applications ranging from audio to seismic data.
+Discrete-time signal representation and manipulation. DSP is the computational foundation for analyzing signals sampled from continuous-time systems.
 
 ## Fundamentals
 

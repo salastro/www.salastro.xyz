@@ -43,7 +43,7 @@ where weights $w$ are stored in BRAM and updated every clock cycle.
 
 **Hardware Target**: Xilinx Artix-7 (cost-effective, streaming architecture)
 
-**Tools**: Vivado HLS for high-level synthesis, reducing development time
+**Tools**: Vivado HLS for high-level synthesis
 
 **Resources**:
 - ~40% LUT utilization

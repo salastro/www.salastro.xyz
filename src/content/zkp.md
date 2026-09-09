@@ -20,11 +20,11 @@ A zero-knowledge proof protocol must satisfy three properties:
 2. **Soundness**: If the prover doesn't know the secret, they cannot convince the verifier with non-negligible probability
 3. **Zero-Knowledge**: The verifier learns nothing but the truth of the statement
 
-## Interactive vs. Non-Interactive
+## Interactive vs. non-interactive
 
-**Interactive ZKPs** require real-time exchange between prover and verifier. **Non-Interactive ZKPs** (NIZKs) produce a proof that can be verified by anyone at any time, typically using the Fiat-Shamir heuristic.
+**Interactive ZKPs** require real-time exchange between prover and verifier. **Non-interactive ZKPs** (NIZKs) produce a proof that anyone can verify at any time, typically using the Fiat-Shamir heuristic.
 
-## Practical Systems
+## Practical systems
 
 ### zk-SNARKs
 Succinct, Non-Interactive Arguments of Knowledge. Provide constant-size proofs with efficient verification, enabling scalable privacy-preserving systems.

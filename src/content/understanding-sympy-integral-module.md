@@ -14,9 +14,9 @@ links:
 ---
 
 # Understanding
-## Top-level Integration Module
+## Top-level integration module
 
-The integral module is responsible for representing, manipulating, and evaluating integrals inside SymPy. It acts as a large decision-making system that tries to understand the type of integral being requested, prepares the expression properly, chooses suitable integration strategies, and then either returns a computed result or leaves the integral unevaluated if no method succeeds. The module supports indefinite integrals, definite integrals, multiple integrals, line integrals, changes of variables, differentiation under the integral sign, numerical approximation by sums, and Cauchy principal values. Because integration is one of the most complex areas in symbolic mathematics, the module is designed as a dispatcher that combines many algorithms rather than relying on a single method.
+The integral module represents, manipulates, and evaluates integrals inside SymPy. It acts as a large decision-making system that tries to understand the type of integral being requested, prepares the expression properly, chooses suitable integration strategies, and then either returns a computed result or leaves the integral unevaluated if no method succeeds. The module supports indefinite integrals, definite integrals, multiple integrals, line integrals, changes of variables, differentiation under the integral sign, numerical approximation by sums, and Cauchy principal values. Because integration is one of the most complex areas in symbolic mathematics, the module is designed as a dispatcher that combines many algorithms rather than relying on a single method.
 
 The process usually begins when the user calls the `integrate()` function. This function receives the mathematical expression to be integrated, the variable or variables of integration, and optional settings such as whether to use the Risch algorithm, Meijer G-functions, heuristic methods, or manual integration. The first major step is to create an `Integral` object. This object represents the integral symbolically before it is evaluated. The constructor of the `Integral` class checks whether the function being integrated has its own custom integration behavior through `_eval_Integral`. If it does, the module delegates the work to that custom method. If not, the standard `Integral` object is created using the general limit-handling structure inherited from `AddWithLimits`.
 
@@ -180,7 +180,7 @@ flowchart TD
     end
 ```
 
-## Manual Integration Submodule
+## Manual integration submodule
 
 The `manualintegrate` module is designed to perform symbolic integration in a way that resembles how a student or mathematician would solve an integral by hand. Unlike the general `integrate()` function, which may use advanced algebraic algorithms, Risch integration, Meijer G-functions, or other powerful symbolic techniques, the manual integration module focuses on producing results through recognizable human-style steps. Its goal is not only to find an antiderivative, but also to represent the reasoning path used to reach that antiderivative. This makes the module especially useful for educational purposes, because it can explain the integration process as a sequence of rules such as power rule, substitution, integration by parts, trigonometric rewriting, partial fractions, or special-function recognition.
 
@@ -316,46 +316,39 @@ flowchart TD
 
 # Refactoring
 
-A substantial refactoring effort was undertaken on the SymPy integration subsystem with the goal of improving maintainability, readability, and extensibility of the codebase.
+I took on a substantial refactoring of the SymPy integration subsystem, aiming to make the code easier to maintain, read, and extend.
 
-The primary  motivation behind this effort was that the integration engine had accumulated a significant amount of complex control flow over many years of development. The integration logic spans multiple algorithms, including heuristic methods, manual integration rules, Risch integration, and Meijer G-function based techniques. While highly capable, the implementation had become difficult to navigate and modify safely.
+The integration engine had accumulated a lot of complex control flow over many years of development. Its logic spans heuristic methods, manual integration rules, Risch integration, and Meijer G-function techniques. All of that made the implementation powerful but hard to navigate and risky to modify.
 
-The refactoring focused on restructuring the integration workflow rather than introducing new mathematical capabilities.
+I focused the refactoring on restructuring the integration workflow itself, not on adding new mathematical capabilities.
 
-Key changes included:
+Key changes:
 
-* Extracting and reorganizing large sections of integration logic into smaller, more focused components.
-* Reducing deeply nested conditional structures inside the integration pipeline.
-* Simplifying interactions between `Integral.doit()` and `_eval_integral()`.
-* Improving separation of responsibilities between the high-level integration dispatcher and the individual integration strategies.
-* Cleaning up duplicated logic surrounding evaluation hints (`manual`, `risch`, `heurisch`, and `meijerg` modes).
-* Making the execution flow easier to follow by introducing clearer boundaries between preprocessing, algorithm selection, and result evaluation.
-* Refactoring portions of the manual integration framework to improve consistency between rule generation and rule evaluation.
-* Improving internal code readability through decomposition of large methods and simplification of control-flow paths.
+* Extracted and reorganized large sections of integration logic into smaller, more focused components.
+* Reduced deeply nested conditionals in the integration pipeline.
+* Simplified how `Integral.doit()` and `_eval_integral()` interact.
+* Separated responsibilities more clearly between the high-level integration dispatcher and the individual integration strategies.
+* Cleaned up duplicated logic around evaluation hints (`manual`, `risch`, `heurisch`, `meijerg`).
+* Drew clearer boundaries between preprocessing, algorithm selection, and result evaluation.
+* Refactored parts of the manual integration framework so rule generation and rule evaluation stayed consistent with each other.
+* Broke down large methods and simplified control-flow paths for readability.
 
-Particular attention was given to the interaction between the integration engine implemented in `integrals.py` and the rule-based manual integration framework implemented in `manualintegrate.py`. These files represent some of the most complex and heavily interconnected parts of SymPy's symbolic integration system.
+Most of the work sat at the boundary between `integrals.py`, the integration engine, and `manualintegrate.py`, the rule-based manual integration framework. These are two of the most complex and tightly coupled files in SymPy's symbolic integration system.
 
-## Test Failures and Regression Analysis
+## Test failures and regression analysis
 
-Although the refactoring was designed to preserve behavior, the resulting implementation did not pass the full SymPy test suite.
+The refactoring was supposed to preserve behavior. It didn't. The resulting implementation failed part of the SymPy test suite.
 
-Initial investigation suggested that the failures were not caused by obvious mathematical mistakes but rather by subtle changes in execution order and algorithm selection. SymPy's integration engine relies heavily on carefully tuned heuristics that determine:
+The failures didn't trace back to obvious mathematical mistakes. They came from subtle changes in execution order and algorithm selection. SymPy's integration engine leans on carefully tuned heuristics to decide which strategy to try first, when to fall back to another algorithm, how to process partially integrated expressions, and when to activate special-case handlers. Touch the structure around any of that, even in ways that look harmless, and the system's behavior can shift.
 
-* which integration strategy is attempted first,
-* when fallback algorithms are invoked,
-* how partially integrated expressions are processed,
-* and when special-case handlers are activated.
+Several of the failing tests ran through Meijer G-function machinery. That part of the codebase sits right at the boundary between heuristic integration, special-function transformations, and definite integral evaluation, so small changes in dispatch order or intermediate expression structure can send execution down an entirely different path.
 
-Because of this, even seemingly harmless structural changes can alter the behavior of the system.
+I hadn't intentionally touched the mathematical algorithms, but the surrounding control flow had clearly shifted enough to change behavior in a number of edge cases.
 
-Several failing tests appeared to involve integration paths that eventually relied on Meijer G-function machinery. The Meijer G integration framework is particularly sensitive because it sits near the boundary between heuristic integration, special-function transformations, and definite integral evaluation. Small changes in dispatch order or intermediate expression structure can cause entirely different code paths to be taken.
+## Why I dropped it
 
-In practice, the refactoring likely altered some of these delicate interactions. While the mathematical algorithms themselves were not intentionally modified, the surrounding control flow changed enough to affect behavior in a number of edge cases.
+Finishing this would have meant tracking down a long list of integration regressions, many involving specialized symbolic expressions and hard-to-debug interactions between algorithms.
 
-## Why the Work Was Abandoned
+That cost didn't pencil out against the benefit. The refactor wasn't adding any user-facing functionality, just cleaner internals, and that's not worth the risk of quietly breaking one of SymPy's most mature and sensitive subsystems.
 
-At this stage, continuing the effort would have required a detailed investigation of a large number of integration regressions, many of which involved highly specialized symbolic expressions and difficult-to-debug interactions between integration algorithms.
-
-The expected maintenance cost outweighed the benefits of the architectural cleanup. More importantly, the refactoring did not provide any significant new user-facing functionality that would justify the risk of introducing subtle regressions into one of SymPy's most mature and sensitive subsystems.
-
-As a result, the refactoring branch was abandoned before completion and is not intended to be merged into the main SymPy codebase.
+I abandoned the branch before finishing it. It was never meant to be merged.

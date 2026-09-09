@@ -13,10 +13,10 @@ links:
   - "open-source"
 ---
 
-Essays and guides about Linux distributions, operating systems, and system administration. Practical advice for selecting and understanding the diverse ecosystem of Linux distributions.
+Essays and guides on Linux distributions, operating systems, and system administration, mostly about picking a distro and understanding why they differ.
 
 ## Topics
 
-- Linux distribution selection and comparison
+- Comparing distributions
 - Operating system design philosophy
-- Distribution families and their characteristics
+- Distribution families and how they relate

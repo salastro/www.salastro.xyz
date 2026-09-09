@@ -12,7 +12,7 @@ links:
 
 Electric propulsion systems accelerating ionized propellant to extremely high velocities, achieving high specific impulse for efficient long-duration space missions. Critical for beyond-LEO operations and spacecraft with limited fuel budgets.
 
-## Physics Principles
+## Physics principles
 
 Ionic propulsion generates thrust through:
 
@@ -20,36 +20,27 @@ $$F = \dot{m} v_e + (P_e - P_a)A_e$$
 
 where $\dot{m}$ is mass flow rate, $v_e$ is exhaust velocity, and $P_e$ is exit pressure.
 
-By ionizing propellant and accelerating it electrostatically/electromagnetically, exhaust velocities reach 20-50 km/s (vs. ~4 km/s for chemical).
+By ionizing propellant and accelerating it electrostatically or electromagnetically, exhaust velocities reach 20-50 km/s, against roughly 4 km/s for chemical propulsion.
 
 ## Advantages
 
-- **High specific impulse**: 2000-5000 seconds (chemical: 300-450s)
-- **Fuel efficiency**: Extended operations with limited propellant
-- **Fine control**: Low thrust allows precision maneuvers
-- **Long operational life**: No combustion, gradual degradation
+Specific impulse runs 2000-5000 seconds, versus 300-450s for chemical engines, which is the whole reason ion drives exist: a spacecraft that can afford to burn slowly gets far more delta-v per kilogram of propellant. That trades into extended operations on limited propellant, precise maneuvers at low thrust, and a long operational life since there's no combustion, only gradual electrode wear.
 
-## System Components
+## System components
 
-- **Ionization stage**: Produces plasma (electron-bombardment or microwave)
-- **Acceleration region**: Electric or magnetic field accelerates ions
-- **Neutralizer**: Neutralizes exhaust to prevent spacecraft charging
-- **Power supply**: Typically solar arrays or nuclear reactor
+An ionization stage produces plasma, either by electron bombardment or microwave excitation. An acceleration region then pushes the ions with an electric or magnetic field. A neutralizer fires electrons into the exhaust so the spacecraft doesn't accumulate charge, and a power supply, usually solar arrays or a nuclear reactor, drives the whole thing.
 
-## Challenge
+## Challenges
 
-- **Thrust**: Very low (mN range), requiring long duration burns
-- **Plume interactions**: Plasma effects on spacecraft surfaces and instruments
-- **Erosion**: Ion bombardment degrades electrodes
-- **Power requirements**: Demanding for high-power systems
+Thrust sits in the millinewton range, so missions need long duration burns to get anywhere. Plasma from the plume interacts with spacecraft surfaces and instruments, ion bombardment erodes electrodes over time, and high-power systems demand more power than most spacecraft can easily supply.
 
-## Heritage Missions
+## Heritage missions
 
 - Deep Space 1 (ion drive validation)
 - Dawn (asteroid missions)
 - GOSAT-2 and other satellite stations
 
-## Future Development
+## Future development
 
 - Hall-effect thrusters (higher power)
 - Field-emission electric propulsion

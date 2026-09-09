@@ -11,7 +11,7 @@ links:
   - "math"
 ---
 
-Time-frequency analysis tool providing localized decomposition of signals at multiple scales. Unlike Fourier analysis, wavelets capture both frequency content and temporal localization—ideal for transient events and multi-scale phenomena.
+Time-frequency analysis tool providing localized decomposition of signals at multiple scales. Unlike Fourier analysis, wavelets capture both frequency content and temporal localization, which suits transient events and multi-scale phenomena.
 
 ## Motivation
 

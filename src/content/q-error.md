@@ -10,35 +10,26 @@ links:
   - "quantum-systems"
 ---
 
-Framework for protecting quantum information from decoherence and noise through encoding schemes and recovery procedures. QEC is essential for building fault-tolerant quantum computers.
+Ways to protect quantum information from decoherence and noise, through encoding schemes and recovery procedures. There's no fault-tolerant quantum computer without it.
 
-## The Challenge
+## The challenge
 
-Quantum information is fragile—measurement and interaction with environment destroy coherence. Classical error correction copying doesn't work due to the no-cloning theorem.
+Quantum information is fragile. Measuring it, or letting it interact with the environment, destroys coherence. Copying it, the obvious classical fix, is ruled out by the no-cloning theorem.
 
-## Stabilizer Codes
+## Stabilizer codes
 
-Most practical QEC codes use stabilizer formalism. A stabilizer code encodes $k$ logical qubits in $n$ physical qubits using stabilizer generators that are multi-qubit Pauli operators.
+Most practical QEC codes use the stabilizer formalism: a stabilizer code encodes $k$ logical qubits in $n$ physical qubits, using stabilizer generators that are multi-qubit Pauli operators.
 
-Key stabilizer codes:
-- **Surface Code**: 2D lattice, local interactions, favorable error thresholds (~1%)
-- **Toric Code**: Topological code with inherent robustness
-- **Concatenated Codes**: Hierarchical encoding for recursive protection
+The surface code is the most studied one, a 2D lattice with local interactions and an error threshold around 1%. The toric code is a topological variant with the same robustness built into its structure. Concatenated codes take a different approach, stacking encodings recursively instead of relying on geometry.
 
-## Error Models
+## Error models
 
-Typical error models include:
-- Bit-flip ($X$ errors)
-- Phase-flip ($Z$ errors)
-- Depolarization (random Paulis)
-- Dephasing (loss of coherence)
+The usual error models are bit-flip ($X$ errors), phase-flip ($Z$ errors), depolarization (a random Pauli), and dephasing (loss of coherence).
 
-## Threshold Theorem
+## Threshold theorem
 
-Below a critical error threshold $p_t$, logical error rates decrease exponentially with code distance—enabling arbitrarily accurate quantum computation with fixed physical error rates.
+Below a critical error threshold $p_t$, the logical error rate drops exponentially as code distance increases. That's what makes arbitrarily accurate computation possible even with fixed, noisy physical qubits.
 
-## Current Status
+## Current status
 
-- Experimental realization in trapped ions and superconducting qubits
-- Overhead: hundreds to thousands of physical qubits per logical qubit
-- Active research on improving efficiency
+Realized experimentally in trapped ions and superconducting qubits, at a cost of hundreds to thousands of physical qubits per logical qubit. Most active research is aimed at bringing that overhead down.

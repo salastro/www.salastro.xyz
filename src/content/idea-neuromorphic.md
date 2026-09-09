@@ -10,57 +10,32 @@ links:
   - "ideas"
 ---
 
-Bio-inspired computing hardware that emulates neural structures and processes. Neuromorphic circuits promise orders-of-magnitude improvements in energy efficiency for certain computational tasks compared to traditional digital systems.
+Bio-inspired computing hardware that emulates neural structures and processes instead of a conventional digital layout. For some workloads it can be orders of magnitude more energy-efficient than standard digital hardware.
 
 ## Motivation
 
-The human brain performs complex tasks (vision, reasoning, learning) with ~20 watts of power. Traditional digital processors require kilowatts for equivalent computational capacity, suggesting fundamental inefficiencies in current architectures.
+The brain runs vision, reasoning, and learning on about 20 watts. Digital processors need kilowatts for comparable computation. That gap alone says something is architecturally wrong with how we build computers.
 
-## Key Concepts
+## Spiking neural networks
 
-### Spiking Neural Networks (SNNs)
-Neurons communicate via discrete spikes with precise timing, mimicking biological neurons more accurately than artificial neural networks.
+Neurons communicate through discrete, precisely-timed spikes, closer to how biological neurons actually work than a standard artificial neural network. The upside: computation only happens when a spike does, so the network is naturally sparse and encodes information in timing, not just magnitude. The downside: training SNNs is harder than training ordinary ANNs, the theory behind them is thinner, and the hardware to run them is more complex to build.
 
-**Advantages**:
-- Event-driven computation (only active when spikes occur)
-- Temporal information encoding
-- Natural sparse representations
+## Analog computing
 
-**Challenges**:
-- Training SNNs is harder than standard ANNs
-- Limited theoretical understanding
-- Hardware complexity
+Uses continuous physical quantities, voltage or current, instead of digital logic. That buys inherent parallelism and low power for free, at the cost of the precision and reproducibility digital circuits give you by default.
 
-### Analog Computing
-Using continuous physical quantities (voltages, currents) rather than digital logic. Enables inherent parallelism and low-power operation.
+## Technical approaches
 
-## Technical Approaches
+Memristors are two-terminal devices whose resistance depends on history, which makes them a natural fit for synaptic connections. Phase-change materials store information densely by exploiting phase transitions. Photonic circuits use light for computation that's both fast and low-energy. Mixed-signal designs combine analog processing with digital control to get some of both worlds.
 
-- **Memristors**: Two-terminal devices with state-dependent resistance for synaptic connections
-- **Phase-Change Materials**: Exploiting phase transitions for dense information storage
-- **Photonic Circuits**: Using light for ultra-fast, ultra-low-energy computation
-- **Mixed-Signal**: Combination of analog processing with digital control
+## Open problems
 
-## Research Challenges
+Fabricating complex analog circuits reliably is still hard, and so is handling component variation and noise without losing the efficiency gains. Designing algorithms that actually exploit the hardware, rather than just porting a digital algorithm onto it, is its own open problem. There's also no agreed way to benchmark neuromorphic systems against digital ones, since the usual metrics assume digital semantics.
 
-1. **Fabrication**: Reliable production of complex analog circuits
-2. **Robustness**: Handling component variation and noise
-3. **Algorithm Design**: Leveraging neuromorphic hardware effectively
-4. **Testing & Validation**: Novel metrics beyond traditional benchmarks
+## Potential applications
 
-## Potential Applications
+Always-on sensing, robotics, pattern recognition on resource-constrained devices, edge AI inference. Anywhere the power budget is the actual bottleneck, not raw throughput.
 
-- Always-on sensing and monitoring
-- Robotics and autonomous systems
-- Pattern recognition in resource-constrained devices
-- Edge AI inference
+## Current status
 
-## Current Status
-
-- Intel Loihi 2: Neuromorphic processor research system
-- IBM TrueNorth: Training benchmark
-- Academic prototypes and demonstrations
-
-## Research Directions
-
-This remains highly exploratory—combining neurobiology, physics, and computer science to understand computation at its most fundamental level.
+Intel's Loihi 2 and IBM's TrueNorth are the two names that keep coming up, both still research systems rather than anything you'd deploy. Beyond that it's academic prototypes and demonstrations, nothing close to a general-purpose neuromorphic computer yet.

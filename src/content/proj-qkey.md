@@ -15,40 +15,34 @@ links:
 
 Implementation of post-quantum hybrid quantum key distribution protocols combining quantum and classical cryptographic primitives for enhanced security against both current and future adversaries.
 
-## Protocol Design
+## Protocol design
 
-### Hybrid Approach
+### Hybrid approach
 
-Combines:
-- **Quantum Component**: BB84 or Ekert '91 for quantum key generation
-- **Classical Component**: Post-quantum KEM (Key Encapsulation Mechanism) for classical channel
-- **Authentication**: Zero-knowledge proofs for entity authentication
+Combines a quantum component (BB84 or Ekert '91 for key generation), a classical component (a post-quantum KEM for the classical channel), and zero-knowledge proofs for entity authentication.
 
-Final key derives from XOR of both components, requiring both quantum AND classical channels to be secure.
+The final key is the XOR of both components, so both the quantum and classical channels have to be secure for the whole thing to hold.
 
-### Security Properties
+### Security properties
 
-- **Quantum advantage**: Eavesdropping on quantum channel leaves detectable traces
-- **Post-quantum safety**: Resistant to quantum computing attacks
-- **Forward secrecy**: Compromised long-term keys don't compromise past sessions
+- Quantum advantage: eavesdropping on the quantum channel leaves detectable traces
+- Post-quantum safety: resistant to quantum computing attacks
+- Forward secrecy: compromised long-term keys don't expose past sessions
 
-## Implementation Challenges
+## Implementation challenges
 
-**Experimental Apparatus**: Requires quantum optics (single photon sources, detectors) and classical networking.
+- Experimental apparatus: needs quantum optics (single-photon sources, detectors) and classical networking
+- Timing synchronization: quantum and classical channels have to stay precisely synced
+- Loss and detection: photon losses in the channel cut the key generation rate
+- Real-time processing: sifted key extraction needs fast classical post-processing
 
-**Timing Synchronization**: Quantum and classical channels must be precisely synchronized.
+## Platform targets
 
-**Loss and Detection**: Photon losses in channels reduce key generation rates.
+- Chip-scale: integrated photonics on silicon
+- Free-space: satellite-ground links
+- Fiber: metropolitan area networks
 
-**Real-Time Processing**: Fast classical post-processing for sifted key extraction.
-
-## Platform Targets
-
-- **Chip-scale**: Integrated photonics on silicon
-- **Free-space**: Satellite-ground links
-- **Fiber**: Metropolitan area networks
-
-## Expected Outcomes
+## Expected outcomes
 
 - Working prototype implementation
 - Performance characterization (throughput, error rates, range)

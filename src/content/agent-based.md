@@ -22,7 +22,7 @@ Agent-based models contain:
 
 ## Advantages
 
-- **Natural representation**: Maps intuitive to systems with heterogeneous components
+- **Natural representation**: Maps intuitively onto systems with heterogeneous components
 - **Flexibility**: Easy to add complexity incrementally
 - **Emergent properties**: Unexpected behaviors from simple rules
 - **Visualization**: Agent states and movements provide intuitive understanding

@@ -18,7 +18,7 @@ APL is a quite old language. It started as a book (under the same name) written 
 
 The notation was used inside IBM (his workplace) for describing some reports. However, the first interpreter was not built until a year later for limited use. On the other hand, the first commercially available one was introduced in 1968. After that, APL started gaining popularity from the late 1960s till the early 1980s.
 
-In contrast, these days APL is not as popular as it used to be. Despite that, development is still going. The most popular implementation of APL is Dyalog, a commercial implementation started in 1983 (yes, even the most modern of implementations is on the old side) that in recent years added useful extensions like object-oriented and functional programming, nested arrays, lambda calculus, etc. Additionally, if you are not a fan of commercial restricted use, you may try GNU APL but with fewer extensions.
+In contrast, these days APL is not as popular as it used to be. Despite that, development is still going. The most popular implementation of APL is Dyalog, a commercial implementation started in 1983 (yes, even the most modern of implementations is on the old side) that in recent years added useful extensions like object-oriented and functional programming, nested arrays, lambda calculus, etc. If you'd rather avoid commercial restrictions, GNU APL is an option, though it has fewer extensions.
 
 ## Scripts of Magic
 
@@ -64,7 +64,7 @@ Generally, APL solutions to algorithmic problems involving arrays in some form a
 | [LeetCode #1614](https://leetcode.com/problems/maximum-nesting-depth-of-the-parentheses/)                | `⌈/+\(⊣-~)'('=(s∊'()')/s` | `max(itertools.accumulate(filter(None, map({"(": 1, ")": -1}.get, s))), default=0)` |
 | [LeetCode #14](https://leetcode.com/problems/longest-common-prefix/)                                     | `{+/∧\(⊃∧.=⊢)¨↓⍉↑⍵}↑⊃`    | `''.join(x[0] for x in itertools.takewhile(more_itertools.all_equal, zip(*words)))` |
 
-However, it is important to realize that this is not always the case; it is completely possible to write ugly code in APL that could have been written better in other traditional programming languages. It basically depend on the problem and the approach.
+That's not always the case, though. It's completely possible to write ugly APL that would've been cleaner in a traditional language. It depends on the problem and the approach.
 
 ## For Future Wizards
 1. [Try APL online](https://tryapl.org/)

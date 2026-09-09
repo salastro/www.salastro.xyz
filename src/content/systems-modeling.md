@@ -15,25 +15,25 @@ links:
   - "control-theory"
 ---
 
-Comprehensive framework for understanding complex systems through mathematical modeling, simulation, and control theory. Systems modeling bridges physics, biology, economics, and engineering through unified principles.
+Framework for understanding complex systems through mathematical modeling, simulation, and control theory. The same core ideas show up across physics, biology, economics, and engineering.
 
-## Core Principles
+## Core principles
 
-A system is defined by its components, interactions, and emergent behaviors. Systems modeling encompasses:
-- **State representation**: How we encode system information
-- **Dynamics**: How the system evolves over time
-- **Feedback loops**: How information affects future states
-- **Control**: How we influence system behavior
+A system is defined by its components, interactions, and emergent behaviors. Systems modeling covers:
+- **State representation**: how we encode system information
+- **Dynamics**: how the system evolves over time
+- **Feedback loops**: how information affects future states
+- **Control**: how we influence system behavior
 
-## Modeling Paradigms
+## Modeling paradigms
 
-### Traditional Approaches
-Differential equations and state-space representations capture continuous dynamics. These are ideal for physical systems with well-defined governing laws.
+### Traditional approaches
+Differential equations and state-space representations capture continuous dynamics, and work well for physical systems with well-defined governing laws.
 
-### Modern Approaches
-Agent-based models, cybernetic systems, and complex adaptive systems handle heterogeneous components with local interactions that produce global phenomena.
+### Modern approaches
+Agent-based models, cybernetic systems, and complex adaptive systems handle heterogeneous components whose local interactions produce global phenomena.
 
-## Interdisciplinary Applications
+## Interdisciplinary applications
 
 Systems thinking applies across domains:
 - Biological networks and cellular signaling
@@ -42,6 +42,6 @@ Systems thinking applies across domains:
 - Infrastructure and critical systems
 - Aerospace vehicle control
 
-## Information and Control
+## Information and control
 
 The fundamental limits of sensing, computation, and actuation constrain what control strategies are achievable. Shannon information theory and cybernetic principles guide these designs.

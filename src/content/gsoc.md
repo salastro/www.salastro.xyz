@@ -14,4 +14,4 @@ links:
   - "open-source"
 ---
 
-The Google Summer of Code (GSoC) is a remote program which Google organizes to encourage open-source contributions and push the boundaries of humanity's work. The program started in 2005 exclusively for students. Then in 2022, it became no longer constrained by official enrollment. Participants get the opportunity to write software directly under the mentorship of project leads and main contributors from a selected list of organizations. Project ideas are listed by host organizations involved and students can also propose their own project ideas.
+Google Summer of Code (GSoC) is a remote program Google runs to support open-source contributions. It started in 2005, open only to students. In 2022, that requirement dropped. Participants write software under the direct mentorship of project leads and core contributors from a set of participating organizations. Host organizations list project ideas, and students can also propose their own.

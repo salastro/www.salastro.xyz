@@ -22,13 +22,13 @@ links:
 
 Secure communication in the presence of adversarial behavior. Specifically interested in post-quantum cryptographic primitives and zero-knowledge proofs for privacy-preserving systems.
 
-## Core Principles
+## Core principles
 
-Modern cryptography rests on computational hardness assumptions. The security of cryptographic schemes is measured against polynomial-time adversaries with bounded computational resources.
+Modern cryptography rests on computational hardness assumptions. A scheme's security is measured against polynomial-time adversaries with bounded computational resources.
 
-## Post-Quantum Considerations
+## Post-quantum considerations
 
-With quantum computing advancing, lattice-based cryptography and hash-based signatures offer promising alternatives to RSA and ECC for long-term security guarantees.
+As quantum computers improve, lattice-based cryptography and hash-based signatures are the leading candidates to replace RSA and ECC for long-term security.
 
 ## Applications
 

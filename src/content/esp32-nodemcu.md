@@ -12,7 +12,7 @@ links:
 
 The ESP32 is the kind of chip that makes wireless embedded systems feel easy until you start caring about power, scheduling, and concurrency. NodeMCU sits in that same world as a convenient development board ecosystem, which is why people keep using the name even when they are talking about different boards.
 
-## What Makes It Useful
+## What makes it useful
 
 The ESP32 family gives you a lot for very little money:
 - Wi-Fi
@@ -23,7 +23,7 @@ The ESP32 family gives you a lot for very little money:
 
 That combination makes it ideal for IoT prototypes and connected devices.
 
-## Why It Is Popular
+## Why it is popular
 
 It sits in a sweet spot between simplicity and capability. You can build a sensor node, a web-controlled relay, or a small automation system without needing a Linux board.
 
@@ -48,7 +48,7 @@ The ESP32 is powerful, but it is still a microcontroller.
 - Power management matters more than people expect
 - Debugging concurrent firmware can become messy quickly
 
-## Typical Uses
+## Typical uses
 
 - Smart home devices
 - Wireless sensor nodes

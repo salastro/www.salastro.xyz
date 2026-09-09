@@ -35,7 +35,7 @@ Ideas progress through stages:
 
 ## Relationship to Projects
 
-Many active projects originated as ideas in this section. The distinction is maturity level—ideas are at the exploration phase while projects have clear objectives and timelines.
+Many active projects originated as ideas in this section. The distinction is maturity level: ideas are at the exploration phase while projects have clear objectives and timelines.
 
 ## Current Focus Areas
 

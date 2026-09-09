@@ -41,7 +41,7 @@ Manual selection of discriminative features (power spectra, oscillations, event-
 ### Machine Learning
 Automatically learning discriminative features from data using neural networks, SVMs, or ensemble methods.
 
-### Challenges**:
+### Challenges
 - **Inter-subject variability**: Requires individual calibration
 - **Non-stationarity**: Neural responses drift over time
 - **Noise**: Environmental and physiological interference
@@ -70,4 +70,4 @@ Automatically learning discriminative features from data using neural networks, 
 
 ## Research Opportunities
 
-Understanding how the brain encodes intent, developing better noise rejection, creating more intuitive interfaces—bridging neuroscience and engineering.
+The open questions worth chasing: how the brain actually encodes intent, how to reject noise without throwing away signal, and what makes an interface feel intuitive rather than trained. All of it sits at the boundary between neuroscience and engineering.

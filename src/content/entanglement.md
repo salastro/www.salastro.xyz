@@ -29,7 +29,7 @@ where $\rho_A = \text{Tr}_B(|\psi\rangle\langle\psi|)$ is the reduced density ma
 
 ## Area Law
 
-In many physical systems, entanglement entropy scales with the boundary area rather than volume—a deep principle underlying field theory and gravity.
+In many physical systems, entanglement entropy scales with the boundary area rather than volume, a principle underlying field theory and gravity.
 
 ## Applications
 

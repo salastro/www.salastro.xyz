@@ -14,10 +14,10 @@ Interdisciplinary study of communication and control in living organisms and mac
 
 ## Foundational Principles
 
-Cybernetics rests on three pillars:
-1. **Circular causal systems**: Feedback loops create circular dependencies
-2. **Self-regulation**: Systems maintain stability through feedback
-3. **Information**: Communication and signals regulate behavior
+Cybernetics rests on:
+- **Circular causal systems**: Feedback loops create circular dependencies
+- **Self-regulation**: Systems maintain stability through feedback
+- **Information**: Communication and signals regulate behavior
 
 ## Key Concepts
 

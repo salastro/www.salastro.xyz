@@ -25,6 +25,6 @@ Most of my hands-on math work happens through SymPy's integration engine, extend
 
 ## Where It Shows Up
 
-Math rarely stays in its own node here. It is the substrate underneath the estimation theory in signal processing, the hardness assumptions in cryptography, and the linear algebra running quietly beneath every quantum systems question. This node exists mostly to give that substrate a place of its own.
+Math rarely stays in its own node here. It sits under the estimation theory in signal processing, the hardness assumptions in cryptography, and the linear algebra running quietly beneath every quantum systems question. This node exists mostly to give that underlying layer a place of its own.
 
 
