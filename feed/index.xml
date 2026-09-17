@@ -4,9 +4,38 @@
     <title>SalahDin Rezk Blog</title>
     <link>https://salastro.github.io</link>
     <description>Essays and technical writing from SalahDin Rezk.</description>
-    <lastBuildDate>Wed, 09 Sep 2026 16:23:04 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 17 Sep 2026 08:36:29 GMT</lastBuildDate>
     <atom:link href="https://salastro.github.io/feed/index.xml" rel="self" type="application/rss+xml"/>
     <atom:link rel="next" href="https://salastro.github.io/feed/index.2.xml" type="application/rss+xml"/>
+    <item>
+      <title>On Void</title>
+      <link>https://salastro.github.io/#on-void</link>
+      <guid isPermaLink="true">https://salastro.github.io/#on-void</guid>
+      <pubDate>Thu, 17 Sep 2026 00:00:00 GMT</pubDate>
+      <category>distros</category>
+      <category>opinion</category>
+      <description>I do not know why I felt the need to write this post. I have been using Void
+ for 5-6 years. For the most part, I have enjoyed this journey with its ups and
+ downs. It was sometimes challenging to work around runit as everything is
+ built around systemd and even more was musl as I when I started it was my main
+ base rather than the glibc version. Admittedly, this helped me improve my
+ technical skills and deep understanding way more than otherwise. That said,
+ Void has been recently insufferable. Contributing to the packages has been
+ more annoying than ever as my PRs get closed too quickly without properly
+ addressing the content; frequent failures in the mirror repos (I am unsure
+ whether this has been a widespread issue to anyone other than me); and
+ unfixable bad behaviour and some bugs here and there. The recent issue in
+ noto-fonts made me open the subreddit looking for answers then I saw a
+ submission mentioning the recent maintainer&apos;s orphanage of 100+ packages over
+ an AI dispute. I believed it was some kind of AI code slop nonsense that does
+ not deserve to be looked at (as I am very anti-LLM generated code in that
+ sense), yet to my surprise, it was just a comment. The comment was simply
+ noting breaks introduced by a version bump. I believe this is wholeheartedly
+ dumb and overly pedantic. Sadly, this place is no longer meant for me as this
+ distro is hardly functional anymore. I know no one will care and no one is
+ supposed to; this is more like a personal sacrifice as I reminiscent on the
+ days I used to make videos talking all about Void.</description>
+    </item>
     <item>
       <title>GSoC Week 15: Owning the Recursion</title>
       <link>https://salastro.github.io/#gsoc-week-15</link>
@@ -121,18 +150,6 @@
       <category>manualintegrate</category>
       <category>symbolic-integration</category>
       <description>After spending the previous week understanding how manualintegrate searched for solutions, I finally started making changes to the integrator itself. Rather than adding completely new capabilities, I decided to focus on something that had bothered me ever since I began reading the integration code: SymPy&apos;s symbolic integrators were surprisingly fragmented.</description>
-    </item>
-    <item>
-      <title>GSoC Week 2: Looking for Patterns</title>
-      <link>https://salastro.github.io/#gsoc-week-2</link>
-      <guid isPermaLink="true">https://salastro.github.io/#gsoc-week-2</guid>
-      <pubDate>Mon, 08 Jun 2026 00:00:00 GMT</pubDate>
-      <category>gsoc</category>
-      <category>sympy</category>
-      <category>symbolic-integration</category>
-      <category>manualintegrate</category>
-      <category>pattern-matching</category>
-      <description>During the second week of Google Summer of Code, I still had not written a single feature that was intended to be merged into SymPy. Instead, I spent most of my time trying to understand why manualintegrate behaves the way it does and, more importantly, what its limitations are. Looking back, this was probably the most valuable decision I could have made.</description>
     </item>
   </channel>
 </rss>

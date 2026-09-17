@@ -6,6 +6,17 @@
   "description": "Essays and technical writing from SalahDin Rezk.",
   "items": [
     {
+      "id": "https://salastro.github.io/#on-void",
+      "url": "https://salastro.github.io/#on-void",
+      "title": "On Void",
+      "content_text": "I do not know why I felt the need to write this post. I have been using Void\n for 5-6 years. For the most part, I have enjoyed this journey with its ups and\n downs. It was sometimes challenging to work around runit as everything is\n built around systemd and even more was musl as I when I started it was my main\n base rather than the glibc version. Admittedly, this helped me improve my\n technical skills and deep understanding way more than otherwise. That said,\n Void has been recently insufferable. Contributing to the packages has been\n more annoying than ever as my PRs get closed too quickly without properly\n addressing the content; frequent failures in the mirror repos (I am unsure\n whether this has been a widespread issue to anyone other than me); and\n unfixable bad behaviour and some bugs here and there. The recent issue in\n noto-fonts made me open the subreddit looking for answers then I saw a\n submission mentioning the recent maintainer's orphanage of 100+ packages over\n an AI dispute. I believed it was some kind of AI code slop nonsense that does\n not deserve to be looked at (as I am very anti-LLM generated code in that\n sense), yet to my surprise, it was just a comment. The comment was simply\n noting breaks introduced by a version bump. I believe this is wholeheartedly\n dumb and overly pedantic. Sadly, this place is no longer meant for me as this\n distro is hardly functional anymore. I know no one will care and no one is\n supposed to; this is more like a personal sacrifice as I reminiscent on the\n days I used to make videos talking all about Void.",
+      "date_published": "2026-09-17",
+      "tags": [
+        "distros",
+        "opinion"
+      ]
+    },
+    {
       "id": "https://salastro.github.io/#gsoc-week-15",
       "url": "https://salastro.github.io/#gsoc-week-15",
       "title": "GSoC Week 15: Owning the Recursion",
@@ -136,20 +147,6 @@
         "sympy",
         "manualintegrate",
         "symbolic-integration"
-      ]
-    },
-    {
-      "id": "https://salastro.github.io/#gsoc-week-2",
-      "url": "https://salastro.github.io/#gsoc-week-2",
-      "title": "GSoC Week 2: Looking for Patterns",
-      "content_text": "During the second week of Google Summer of Code, I still had not written a single feature that was intended to be merged into SymPy. Instead, I spent most of my time trying to understand why manualintegrate behaves the way it does and, more importantly, what its limitations are. Looking back, this was probably the most valuable decision I could have made.",
-      "date_published": "2026-06-08",
-      "tags": [
-        "gsoc",
-        "sympy",
-        "symbolic-integration",
-        "manualintegrate",
-        "pattern-matching"
       ]
     }
   ],
